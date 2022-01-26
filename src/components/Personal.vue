@@ -31,16 +31,13 @@ export default {
         PersonalCard
     },
     async mounted(){
-        let data = await fetch(`https://graph.instagram.com/me/media?fields=id,media_url,caption&access_token=${import.meta.env.VITE_INSTAGRAM_ACCESS_TOKEN}`)
+        let data = await fetch(`https://portfolio-serverless-theta.vercel.app/api`)
 
         data = await data.json()
-
-        data = data.data.slice(0, 4)
 
         this.instaImages = data
 
         this.loading = false;
-        
     }
 }
 </script>
