@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col space-y-12 justify-center items-center">
+    <div class="flex flex-col space-y-4 md:space-y-12 justify-center items-center">
 
         <EducationCard :info="{
         label: 'East West University(Bsc.)',
@@ -7,7 +7,6 @@
         timeline: 'From January, 2017 to June 2021'
     }"
         :bgInfo="{
-            
             margin: 'ml-16'
         }"
     />

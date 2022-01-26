@@ -1,12 +1,12 @@
 <template>
 
-    <div class="flex flex-col mt-32 items-center justify-center">
+    <div class="flex flex-col mt-12 md:mt-32 items-center justify-center">
         
         <div class="w-1/2 transition-colors flex flex-col">
             <div>
-                <a class="text-4xl font-bold uppercase cursor-pointer programmer" target="_blank" href="https://github.com/Hasib-cirkut">Programmer</a>
+                <a class="text-2xl md:text-4xl font-bold uppercase cursor-pointer programmer" target="_blank" href="https://github.com/Hasib-cirkut">Programmer</a>
 
-                <p class="-ml-8 text-4xl cursor-pointer font-bold w-fit uppercase programmer">Movie Buff</p>
+                <p class="-ml-8 text-2xl md:text-4xl cursor-pointer font-bold w-fit uppercase programmer">Movie Buff</p>
             </div>
             
             <img 
@@ -14,9 +14,9 @@
             src="/images/profile.jpg" alt="profile_pic">
 
             <div class="flex flex-col justify-end items-end">
-                <p class="text-4xl cursor-pointer programmer font-bold -mr-8 uppercase">An Aesthete</p>
+                <p class="text-2xl md:text-4xl cursor-pointer programmer font-bold -mr-8 uppercase">An Aesthete</p>
 
-                <p class="text-4xl cursor-pointer programmer font-bold uppercase">Melophile</p>
+                <p class="text-2xl md:text-4xl cursor-pointer programmer font-bold uppercase">Melophile</p>
             </div>
         </div>
 

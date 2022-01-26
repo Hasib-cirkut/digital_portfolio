@@ -1,11 +1,11 @@
 <template>
 
-  <main class="overflow-x-hidden relative w-full">
-  <div id="left" class="fixed w-1/2 bg-gray-900 h-full text-white font-mono p-20">
+  <main class="overflow-x-hidden w-full">
+  <div id="left" class="hidden xl:flex xl:fixed xl:w-1/2 xl:bg-gray-900 xl:h-full text-white font-mono p-20">
     <div class="flex flex-col h-full">
-      <div class="flex-1 select-none space-y-8">
+      <div class="flex flex-col flex-1 select-none space-y-8 pb-8">
 
-            <div>
+            <div class="flex-1 ">
               <div id="label" class="text-4xl text-pink-400 font-bold">
                 <p>{{info.label}}</p>
               </div>
@@ -44,16 +44,37 @@
     </div>
   </div>
 
-  <div id="right flex-1"
-    class="bg-teal-600 float-right w-1/2 space-y-48 overflow-auto scroll-smooth">
+  <div id="right"
+    class="bg-teal-600 float-right w-full xl:w-1/2 space-y-12 md:space-y-48 overflow-auto scroll-smooth">
 
     <ProfileCard />
 
-    <Projects />
+    <div>
+      <p class="flex justify-center md:hidden text-xl uppercase programmer">
+        Projects
+      </p>
 
-    <Education />
+      <Projects />
+    </div>
 
-    <Personal />
+
+    <div>
+      <p class="flex justify-center md:hidden text-xl uppercase programmer">
+        Education
+      </p>
+
+      <Education />
+    </div>
+
+    <div>
+      <p class="flex justify-center md:hidden text-xl uppercase programmer">
+        Socials
+      </p>
+      
+      <Personal />
+    </div>
+
+    
 
     <Thankyou />
   </div>
@@ -152,3 +173,13 @@ export default {
 }
 
 </script>
+
+<style scoped>
+.programmer{
+    color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: antiquewhite;
+}
+</style>
+

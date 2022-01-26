@@ -3,9 +3,9 @@
     <div class="w-2/3 m-auto">
 
 
-        <div class="flex flex-col">
+        <div class="flex flex-col space-y-4">
 
-            <div class="flex justify-center items-center space-x-4">
+            <div class="flex justify-center items-center space-y-4 md:space-x-4 flex-wrap md:flex-nowrap">
                 <div>
                     <ProjectCard :info="{
                         label: 'remindme',
@@ -16,7 +16,7 @@
                     />
                 </div>
 
-                <div class="mt-32">
+                <div class="">
                     <ProjectCard :info="{
                         label: 'Personal Blog',
                         desc: 'Personal Blog using Creat React App and Contentful CMS.'
@@ -26,8 +26,8 @@
                 </div>
             </div>
 
-            <div class="flex justify-center items-center space-x-4 -mt-2">
-                <div class="-mt-24">
+            <div class="flex justify-center items-center space-y-4 md:space-x-4 -mt-2 flex-wrap md:flex-nowrap">
+                <div class="">
                     <ProjectCard :info="{
                         label: 'vote.com',
                         desc: 'A voting app based on nodejs/reactjs.'
@@ -37,7 +37,7 @@
                     />
                 </div>
 
-                <div class="mt-8">
+                <div class="">
                     <ProjectCard :info="{
                         label: 'Disease Control Forum',
                         desc: 'A CRUD Forum dedicated to disease control and info sharing.'
