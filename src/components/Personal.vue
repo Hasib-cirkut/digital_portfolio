@@ -46,14 +46,50 @@ export default {
     components:{
         PersonalCard
     },
+
+    methods:{
+        async getInstaImages(){
+            let data = await fetch(`https://portfolio-serverless-theta.vercel.app/api`)
+
+            data = await data.json()
+
+            this.instaImages = data
+
+            this.loading = false;
+
+            let instaCache = {
+                dataArr: this.instaImages,
+                timestamp: Date.now() + (30 * 60 * 1000)
+            }
+
+            localStorage['instagramCache'] = JSON.stringify(instaCache)
+        }
+    },
+
     async mounted(){
-        let data = await fetch(`https://portfolio-serverless-theta.vercel.app/api`)
 
-        data = await data.json()
+        if(!localStorage['instagramCache']){
 
-        this.instaImages = data
+            await this.getInstaImages()
+            
+        }else{
 
-        this.loading = false;
+            let instaCache = JSON.parse(localStorage['instagramCache'])
+
+            if(instaCache.timestamp > Date.now()){
+                // if cache timeout is still available use the cached instagram images
+
+                this.instaImages = instaCache.dataArr
+                this.loading = false
+                
+            }else{
+                // time is out. fetch new items from instagram
+
+                this.getInstaImages()
+            }
+        
+        }
+
     }
 }
 </script>
